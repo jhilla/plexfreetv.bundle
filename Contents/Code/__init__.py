@@ -10,7 +10,7 @@ def Start():
 ##
 @handler('/video/plexPTV', NAME)
 def MainMenu():
-
+	Log("Plugin Running...")
 	oc = ObjectContainer()
 	html = HTTP.Request("http://www.free-tv-video-online.me/internet/the_walking_dead/")
 	match = re.compile('class="mnlcategorylist"><a href="(.+?)"><b>(.+?)[ (]*([0-9]{0,4})[)]*</b></a>(.+?)<').findall(html.content)
@@ -19,7 +19,7 @@ def MainMenu():
 		title = category + " " + number
 		description = "test"
 		link = urllink
-		print title
+		Log(title)
 		oc.add(DirectoryObject(
 			key = Callback(Season, title=title),
 			title = title,
