@@ -1,3 +1,4 @@
+import re
 NAME = "plexPTV"
 
 ##
