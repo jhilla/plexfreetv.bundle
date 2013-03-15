@@ -19,6 +19,7 @@ def MainMenu():
 		title = category + " " + number
 		description = "test"
 		link = urllink
+		print title
 		oc.add(DirectoryObject(
 			key = Callback(Season, title=title),
 			title = title,
