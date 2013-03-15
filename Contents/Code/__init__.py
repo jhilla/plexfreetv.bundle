@@ -25,3 +25,6 @@ def MainMenu():
 			title = title,
 		))
 	return oc
+
+def Season():
+	print ok
